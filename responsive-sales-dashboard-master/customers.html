@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Customers - Store Dashboard</title>
+
+    <!-- Google Fonts & Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">shopping_cart</span> STORE
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="index.html">
+              <span class="material-icons-outlined">dashboard</span>
+              Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="products.html">
+              <span class="material-icons-outlined">inventory_2</span>
+              Products
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="categories.html">
+              <span class="material-icons-outlined">category</span>
+              Categories
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="customers.html" class="active">
+              <span class="material-icons-outlined">groups</span>
+              Customers
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="inventory.html">
+              <span class="material-icons-outlined">fact_check</span>
+              Inventory
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="reports.html">
+              <span class="material-icons-outlined">poll</span>
+              Reports
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Section -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>CUSTOMERS</h2>
+        </div>
+
+        <div class="main-cards">
+          <div class="card">
+            <div class="card-inner">
+              <h3>Customer Records</h3>
+              <span class="material-icons-outlined">groups</span>
+            </div>
+            <p>View and manage customer details and activities.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+  </body>
+
+  <script>
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+</html>
